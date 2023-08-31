@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="dark_primary_color">#FF1976D2</color>
+    <color name="ligth_primary_color">#FF2196F3</color>
+    <color name="primary_color">#FFBBDEFB</color>
+    <color name="text_icon">#FFFFFFFF</color>
+    <color name="accent_color">#FFFF5722</color>
+    <color name="primary_text">#FF212121</color>
+    <color name="secondary_text">#FF727272</color>
+    <color name="divider_color">#FFB6B6B6</color>
+
+</resources>
