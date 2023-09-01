@@ -1,10 +1,14 @@
 package com.example.superproyectocomicon.view
 
 import android.app.Application
+import android.content.Intent
+import android.net.Uri
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.superproyectocomicon.R
 import com.example.superproyectocomicon.data.Repository
 import com.example.superproyectocomicon.data.local.HeroDB
+import com.example.superproyectocomicon.data.local.HeroDetailsEntity
 import com.example.superproyectocomicon.data.remote.HeroRFC
 import kotlinx.coroutines.launch
 
@@ -31,4 +35,24 @@ class HeroVM(application: Application) : AndroidViewModel(application) {
         repository.loadDetailsHero(id)
 
     }
+
+    fun  sendMail(heroDetailsEntity: HeroDetailsEntity){
+        val appli = Application()
+
+        val mail = appli.getString(R.string.destinatario_msn)
+        val bodyMsn = appli.getString(R.string.body_msn, heroDetailsEntity.name)
+        val asunt = appli.getString(R.string.asunt, heroDetailsEntity.name)
+        val intentEmail = Intent(Intent.ACTION_SEND, Uri.parse(mail))
+
+        intentEmail.type = "plain/text"
+        intentEmail.putExtra(Intent.EXTRA_EMAIL, arrayOf(mail))
+
+        intentEmail.putExtra(Intent.EXTRA_SUBJECT, asunt)
+
+        intentEmail.putExtra(Intent.EXTRA_TEXT, bodyMsn)
+
+        appli.startActivity(Intent.createChooser(intentEmail, asunt))
+
+    }
+
 }

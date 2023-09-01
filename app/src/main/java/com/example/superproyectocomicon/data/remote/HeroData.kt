@@ -19,7 +19,7 @@ data class HeroDetailsData(
     @SerializedName("origen") val origin: String,
     @SerializedName("imagenLink") val img: String,
     @SerializedName("poder") val power: String,
-    @SerializedName("Año_creacion") val yearCreation : String,
+    @SerializedName("año_creacion") val yearCreation : String,
     val color : String,
     @SerializedName("traduccion") val translation : Boolean
 )

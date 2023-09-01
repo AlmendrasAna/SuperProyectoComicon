@@ -1,3 +1,15 @@
 <resources>
-    <string name="app_name">SuperProyectoComicon</string>
+    <string name="app_name">Comicon</string>
+    <string name="translation_true">Cuenta con traducción al español</string>
+    <string name="translation_false">Sin traducción.</string>
+
+    <string name="send_mail">enviar msn</string>
+    <string name="image">imagen hero</string>
+
+    <string name="body_msn">Hola \n Quiero que el siguiente super hèroe %1$s aparezca, en la nueva ediciòn de biografìas animadas.\n Número contacto:____________ \n Gracias.
+    </string>
+    <string name="destinatario_msn">Comicconchile@hotmail.com</string>
+    <string name="asunt">Votación %1$s.</string>
+
+
 </resources>
