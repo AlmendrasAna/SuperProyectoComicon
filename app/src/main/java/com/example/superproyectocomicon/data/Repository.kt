@@ -6,8 +6,7 @@ import com.example.superproyectocomicon.data.local.HeroDao
 import com.example.superproyectocomicon.data.local.HeroDetailsEntity
 import com.example.superproyectocomicon.data.local.HeroEntity
 import com.example.superproyectocomicon.data.remote.HeroApi
-import com.example.superproyectocomicon.data.remote.HeroData
-import com.example.superproyectocomicon.data.remote.HeroDetailsData
+
 
 class Repository(private val heroApi: HeroApi, private val heroDao: HeroDao) {
 
@@ -56,22 +55,3 @@ class Repository(private val heroApi: HeroApi, private val heroDao: HeroDao) {
 
 }
 
-fun HeroData.toHeroEntity(): HeroEntity = HeroEntity(
-    this.id,
-    this.name,
-    this.origin,
-    this.img,
-    this.power,
-    this.yearCreation
-)
-
-fun HeroDetailsData.toHeroDetailsEntity(): HeroDetailsEntity = HeroDetailsEntity(
-    this.id,
-    this.name,
-    this.origin,
-    this.img,
-    this.power,
-    this.yearCreation,
-    this.color,
-    this.translation
-)
