@@ -47,7 +47,11 @@ class AdapterHero : RecyclerView.Adapter<AdapterHero.ViewHolder>() {
 
             binding.nameHeroTxt.text = heroEntity.name.uppercase()
             binding.powerTxt.text = heroEntity.origin
-            binding.imageHero.load(heroEntity.img)
+            binding.imageHero.load(heroEntity.img) {
+                crossfade(true)
+                placeholder(R.drawable.comic_con_chile_2023)
+
+            }
 
 
             binding.cardItem.setOnClickListener {

@@ -31,8 +31,7 @@ class DetailHeroFragment : Fragment() {
     }
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
+        inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?
     ): View? {
         binding = FragmentDetailHeroBinding.inflate(inflater, container, false)
         heroVM.getOneDetailsHero(paramId)
@@ -46,7 +45,11 @@ class DetailHeroFragment : Fragment() {
         heroDetails.observe(viewLifecycleOwner) { heroDetails ->
             if (heroDetails != null) {
                 binding.nameDetailHeroTxt.text = heroDetails.name.uppercase()
-                binding.imageHero.load(heroDetails.img)
+                binding.imageHero.load(heroDetails.img) {
+                    crossfade(true)
+                    placeholder(R.drawable.comic_con_chile_2023)
+
+                }
                 binding.power.text = heroDetails.power
                 binding.origin.text = heroDetails.origin
                 binding.year.text = heroDetails.yearCreation
@@ -68,7 +71,8 @@ class DetailHeroFragment : Fragment() {
             }
         }
     }
-    fun  sendMail(heroDetailsEntity: HeroDetailsEntity){
+
+    fun sendMail(heroDetailsEntity: HeroDetailsEntity) {
 
         val mail = getString(R.string.destinatario_msn)
         val bodyMsn = getString(R.string.body_msn, heroDetailsEntity.name)

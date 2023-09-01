@@ -29,7 +29,7 @@
                 android:id="@+id/name_hero_txt"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/dark_primary_color"
+                android:background="@drawable/gradient_2"
                 android:gravity="center"
                 android:padding="5dp"
                 android:textColor="@color/text_icon"
@@ -50,13 +50,13 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/guideline2"
-                tools:srcCompat="@drawable/ic_launcher_foreground" />
+                tools:srcCompat="@drawable/comic_con_chile_2023" />
 
             <TextView
                 android:id="@+id/power_txt"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:background="@color/dark_primary_color"
+                android:background="@drawable/gradient_2"
                 android:gravity="center"
                 android:padding="5dp"
                 android:textColor="@color/text_icon"
