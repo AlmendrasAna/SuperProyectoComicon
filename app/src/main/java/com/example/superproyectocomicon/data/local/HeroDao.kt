@@ -19,5 +19,5 @@ interface HeroDao {
     fun showListHeroEntity(): LiveData<List<HeroEntity>>
 
     @Query("select * from hero_details_table where Id = :id ")
-    fun ShowDetailsHeroEntityForId(id: Int): LiveData<HeroDetailsEntity>
+    fun showDetailsHeroEntityForId(id: Int): LiveData<HeroDetailsEntity>
 }

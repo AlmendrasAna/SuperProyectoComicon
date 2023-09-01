@@ -9,7 +9,9 @@ data class HeroData(
     @SerializedName("imagenLink") val img: String,
     @SerializedName("poder") val power: String,
     @SerializedName("Año_creacion") val yearCreation : String,
-)
+) {
+
+}
 
 data class HeroDetailsData(
     val id: Int,
