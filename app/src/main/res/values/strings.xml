@@ -6,7 +6,7 @@
     <string name="send_mail">enviar msn</string>
     <string name="image">imagen hero</string>
 
-    <string name="body_msn">Hola \n Quiero que el siguiente super hèroe %1$s aparezca, en la nueva ediciòn de biografìas animadas.\n Número contacto:____________ \n Gracias.
+    <string name="body_msn">Hola \n Quiero que el siguiente super héroe %1$s aparezca, en la nueva edición de biografías animadas.\n Número contacto:____________ \n Gracias.
     </string>
     <string name="destinatario_msn">Comicconchile@hotmail.com</string>
     <string name="asunt">Votación %1$s.</string>

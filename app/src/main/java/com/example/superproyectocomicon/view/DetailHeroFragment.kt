@@ -1,5 +1,8 @@
 package com.example.superproyectocomicon.view
 
+import android.app.Application
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -8,6 +11,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import coil.load
 import com.example.superproyectocomicon.R
+import com.example.superproyectocomicon.data.local.HeroDetailsEntity
 import com.example.superproyectocomicon.databinding.FragmentDetailHeroBinding
 
 private const val ARG_KEY = "id"
@@ -58,11 +62,27 @@ class DetailHeroFragment : Fragment() {
 
                 binding.sendMailButton.setOnClickListener {
 
-                    heroVM.sendMail(heroDetails)
+                    sendMail(heroDetails)
                 }
 
             }
         }
     }
+    fun  sendMail(heroDetailsEntity: HeroDetailsEntity){
 
+
+        val mail = getString(R.string.destinatario_msn)
+        val bodyMsn = getString(R.string.body_msn, heroDetailsEntity.name)
+        val asunt = getString(R.string.asunt, heroDetailsEntity.name)
+        val intentEmail = Intent(Intent.ACTION_SEND, Uri.parse(mail))
+
+        intentEmail.type = "plain/text"
+        intentEmail.putExtra(Intent.EXTRA_EMAIL, arrayOf(mail))
+
+        intentEmail.putExtra(Intent.EXTRA_SUBJECT, asunt)
+
+        intentEmail.putExtra(Intent.EXTRA_TEXT, bodyMsn)
+
+        startActivity(Intent.createChooser(intentEmail, asunt))
+    }
 }

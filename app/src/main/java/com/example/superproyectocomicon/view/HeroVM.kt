@@ -36,23 +36,6 @@ class HeroVM(application: Application) : AndroidViewModel(application) {
 
     }
 
-    fun  sendMail(heroDetailsEntity: HeroDetailsEntity){
-        val appli = Application()
 
-        val mail = appli.getString(R.string.destinatario_msn)
-        val bodyMsn = appli.getString(R.string.body_msn, heroDetailsEntity.name)
-        val asunt = appli.getString(R.string.asunt, heroDetailsEntity.name)
-        val intentEmail = Intent(Intent.ACTION_SEND, Uri.parse(mail))
-
-        intentEmail.type = "plain/text"
-        intentEmail.putExtra(Intent.EXTRA_EMAIL, arrayOf(mail))
-
-        intentEmail.putExtra(Intent.EXTRA_SUBJECT, asunt)
-
-        intentEmail.putExtra(Intent.EXTRA_TEXT, bodyMsn)
-
-        appli.startActivity(Intent.createChooser(intentEmail, asunt))
-
-    }
 
 }
