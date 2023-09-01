@@ -10,7 +10,6 @@ class HeroRFC {
         fun getRetrofitHero(): HeroApi {
             val mRetrofit = Retrofit.Builder()
                 .baseUrl(URL_BASE)
-
                 .addConverterFactory(GsonConverterFactory.create())
                 .build()
             return mRetrofit.create(HeroApi::class.java)

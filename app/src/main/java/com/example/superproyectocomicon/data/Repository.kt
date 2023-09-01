@@ -48,7 +48,7 @@ class Repository(private val heroApi: HeroApi, private val heroDao: HeroDao) {
                 }
             }
         } catch (exception: Exception) {
-            Log.e("catch", "Error")
+            Log.e("catch", "error")
         }
     }
 

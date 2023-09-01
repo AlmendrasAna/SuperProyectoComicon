@@ -1,6 +1,6 @@
 package com.example.superproyectocomicon.view
 
-import android.app.Application
+
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
@@ -45,7 +45,7 @@ class DetailHeroFragment : Fragment() {
         val heroDetails = heroVM.getOneDetailsHeroId(id)
         heroDetails.observe(viewLifecycleOwner) { heroDetails ->
             if (heroDetails != null) {
-                binding.nameDetailHeroTxt.text = heroDetails.name
+                binding.nameDetailHeroTxt.text = heroDetails.name.uppercase()
                 binding.imageHero.load(heroDetails.img)
                 binding.power.text = heroDetails.power
                 binding.origin.text = heroDetails.origin
@@ -69,7 +69,6 @@ class DetailHeroFragment : Fragment() {
         }
     }
     fun  sendMail(heroDetailsEntity: HeroDetailsEntity){
-
 
         val mail = getString(R.string.destinatario_msn)
         val bodyMsn = getString(R.string.body_msn, heroDetailsEntity.name)
