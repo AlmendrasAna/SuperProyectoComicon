@@ -10,6 +10,10 @@
     </string>
     <string name="destinatario_msn">Comicconchile@hotmail.com</string>
     <string name="asunt">Votación %1$s.</string>
+    <string name="power">Poder</string>
+    <string name="a_o_de_creacion">Año de Creacion</string>
+    <string name="color">Color</string>
+    <string name="origen">Origen</string>
 
 
 </resources>

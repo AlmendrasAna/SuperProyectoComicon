@@ -46,7 +46,7 @@ class AdapterHero : RecyclerView.Adapter<AdapterHero.ViewHolder>() {
 
 
             binding.nameHeroTxt.text = heroEntity.name.uppercase()
-            binding.powerTxt.text = heroEntity.power
+            binding.powerTxt.text = heroEntity.origin
             binding.imageHero.load(heroEntity.img)
 
 
